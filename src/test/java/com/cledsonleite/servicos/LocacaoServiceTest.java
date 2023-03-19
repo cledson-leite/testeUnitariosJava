@@ -1,7 +1,5 @@
 package com.cledsonleite.servicos;
 
-import static org.junit.Assert.assertThat;
-
 import java.util.Date;
 
 import org.hamcrest.CoreMatchers;
