@@ -11,6 +11,13 @@ import com.cledsonleite.entidades.Usuario;
 
 public class LocacaoService {
 	
+	private final LocacaoDao dao;
+
+	public LocacaoService(LocacaoDao dao) {
+		
+		this.dao = dao;
+	}
+
 	public Locacao alugarFilme(Usuario usuario, List<Filme> filmes) throws Exception {
 		
 		Locacao locacao = new Locacao();
@@ -63,7 +70,7 @@ public class LocacaoService {
 		locacao.setDataRetorno(dataEntrega);
 		
 		//Salvando a locacao...	
-		//TODO adicionar método para salvar
+		dao.salvar(locacao);
 		
 		return locacao;
 	}
